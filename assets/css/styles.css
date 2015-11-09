@@ -1,0 +1,63 @@
+/*NAV*/
+#header {
+	background:#82c341;
+	position:fixed;
+	top:0;
+	width:100vw;
+	z-index:10;
+}    
+nav {
+	float:right;
+}
+nav ul li {
+	list-style-type: none;
+	float: left;
+	width: 90px;
+	font-family:Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 0.15em;
+	text-align: center;
+	line-height: 25px;
+}
+nav li a {
+	color: #f6f5f4;
+	text-decoration: none;
+	display: block;
+}
+nav li a:hover {
+	color: #333;
+}
+nav ul .subnav ul {
+	display: none;
+}
+nav ul .subnav:hover ul{
+	display: block;
+}
+nav ul .subnav ul li {
+	border-top: 1px solid #999;
+}
+nav ul .subnav ul li a {
+	line-height: 25px;
+	text-align: center;
+	font-family:Helvetica, sans-serif;
+	color: black;
+}
+nav li.subnav ul li a:link, nav li.subnav ul li a:visited {
+	color: white;
+}
+nav li.subnav ul li a:hover, nav li.subnav ul li a:active {
+	color: white;
+}
+/*BANNER*/
+#banner{
+    background:url(../img/background.jpg) no-repeat center center;
+    background-size:cover;
+    height:80vh;
+}
+h1{
+    font-size: 50px;
+    text-align: left;
+    color:white;
+    font-family:helvetica;
+
+}
