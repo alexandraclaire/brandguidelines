@@ -1,6 +1,6 @@
 body {
-	background:#f3f3f4;
 	font-family:helvetica, sans-serif;
+		background:rgb(236,235,232);
 }
 .wrapper {
 	margin:0;
@@ -93,28 +93,51 @@ h1{
 }
 /*BUTTONS*/
 .nextsection {
-	background:#82c341;
-	border:none;
+	background:none;
+	border:3px white solid;
 	border-radius:25px;
 	margin:0 auto;
 	position:absolute;
 	left:25%;
 	top:80%;
 	margin-top:3em;
-	padding:1.5em 8em;
+	padding:1em 5em;
 }
 .nextsection a {
 	font-family:helvetica, sans-serif;
 	color:white;
-	font-size:18px;
+	font-size:14px;
 	font-weight:bold;
 	text-decoration:none;
-	letter-spacing:0.5px;
+	letter-spacing:1.2px;
+	text-transform:uppercase;
+}
+.nextsection:hover {
+	background:rgb(132,189,0);
+	border:rgb(132,189,0) 3px solid;
 }
 /*Articles*/
-h2 {
+#heading {
+	background:black;
+	height:100vh;
+
+}
+#heading h2 {
 	font-size:60px;
 	margin-left:30px;
+	color:white;
+	padding-top:65vh;
+	margin-top:0;
+}
+section {
+	padding-top:4em;
+	padding-bottom:4em;
+}
+#horizontal {
+	background:rgb(255,255,255);
+}
+#colour {
+	background:rgb(255,255,255);
 }
 h3 {
 	font-size:50px;
@@ -164,8 +187,8 @@ br {
 }
 .green {
 	background:rgb(132,189,0);
-	width:20vw;
 	color:white;
+	max-width:40vw;
 }
 .black {
 	background:rgb(0,0,0);
@@ -177,7 +200,6 @@ br {
 }
 .sand {
 	background:rgb(236,235,232);
-	height:50vh;
 }
 .white {
 	background:rgb(255,255,255);
