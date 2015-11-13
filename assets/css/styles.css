@@ -1,6 +1,7 @@
 body {
-	font-family:helvetica, sans-serif;
+	font-family: 'Karla', sans-serif;
 		background:rgb(236,235,232);
+		margin:0;
 }
 #content {
 	width:90%;
@@ -16,7 +17,7 @@ body {
 	height:80px;
 }    
 nav {
-	margin-right:30px;
+	margin-right:3em;
 	padding-top:1em;
 	padding-bottom:2em;
 }
@@ -32,12 +33,11 @@ nav ul li {
 	list-style-type: none;
 	float: right;
 	width: 90px;
-	font-family:Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: center;
 	line-height: 25px;
 	font-weight:bold;
-	letter-spacing:0.5px;
+	letter-spacing:0.8px;
 }
 nav li a {
 	color: #f6f5f4;
@@ -52,6 +52,7 @@ nav ul .subnav ul {
 }
 nav ul .subnav:hover ul{
 	display: block;
+
 }
 nav ul .subnav ul li {
 	border-top: 1px solid #999;
@@ -59,7 +60,6 @@ nav ul .subnav ul li {
 nav ul .subnav ul li a {
 	line-height: 25px;
 	text-align: center;
-	font-family:Helvetica, sans-serif;
 	color: black;
 }
 nav li.subnav ul li a:link, nav li.subnav ul li a:visited {
@@ -72,17 +72,18 @@ nav li.subnav ul li a:hover, nav li.subnav ul li a:active {
 #banner{
     background:url(../img/background.jpg) no-repeat center center;
     background-size:cover;
-    height:100vh;
+    height:95vh;
     width:100vw;
-    position:relative;
+    display:flex;
+    justify-content:flex-end;
+	flex-direction:column;
 }
 h1{
-    font-size: 80px;
+    font-size: 70px;
     text-align: left;
-    font-family:helvetica;
-    position:absolute;
-    top:40%;
-    left:5%;
+    margin:0;
+    padding-bottom:1em;
+    margin-left:30px;
 
 }
 .brand {
@@ -91,20 +92,44 @@ h1{
 .guidelines {
 	color:#82c341;
 }
+/*SEPARATOR*/
+#separator {
+	background:rgb(132,189,0);
+	padding-top:5em;
+	padding-bottom:5em;
+	padding-left:10%;
+}
+#separator h2 {
+	font-size:32px;
+}
+#separator p {
+	padding-top:1em;
+	padding-bottom:1em;
+	margin:0;
+	color:rgb(236,235,232);
+	letter-spacing:0.8px;
+	font-size:22px;
+}
+#separator p a {
+	color:black;
+	text-decoration:none;
+}
+#separator p a:hover  {
+	color:rgb(130,130,130);
+	
+}
 /*BUTTONS*/
+.button {
+	padding-bottom:5em;
+	align-self:center;
+}
 .nextsection {
 	background:none;
 	border:3px white solid;
 	border-radius:25px;
-	margin:0 auto;
-	position:absolute;
-	left:25%;
-	top:80%;
-	margin-top:3em;
 	padding:1em 5em;
 }
 .nextsection a {
-	font-family:helvetica, sans-serif;
 	color:white;
 	font-size:14px;
 	font-weight:bold;
@@ -161,35 +186,45 @@ p {
 br {
 	line-height:40px;
 }
-.neutrals {
+.colourcharts {
 	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-around;
-	flex-direction:column;
+	justify-content:space-between;
+	margin-top:4em;
 }
 .green p, .black p, .grey p, .sand p, .white p {
 	font-size:16px;
 	padding-top:1em;
 }
+#spotifygreen {
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:wrap;
+	margin-bottom:4em;
+}
 .green {
 	background:rgb(132,189,0);
 	color:white;
-	max-width:40vw;
+	width:200px;
+	margin-top:1em;
 }
 .black {
 	background:rgb(0,0,0);
 	color:white;
+	width:20vw;
 }
 .grey {
 	background:rgb(130,130,130);
 	color:white;
+	width:20vw;
 }
 .sand {
 	background:rgb(236,235,232);
+	width:20vw;
 }
 .white {
 	background:rgb(255,255,255);
 	border:2px solid black;
+	width:20vw;
 }
 .logo-images {
 	display:flex;
@@ -205,17 +240,41 @@ img {
 	max-width:100%;
 	height:auto;
 }
-.stacks {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-between;
-	align-items:stretch;
-}
 .donts {
 	display:flex;
-	flex-direction:column;
-	justify-content:space-between;
 	flex-wrap:wrap;
+	justify-content:space-between;
+	margin-top:3em;
+
+}
+ol li {
+	font-size:20px;
+	margin-bottom:2em;
+	margin-top:2em;
+	letter-spacing:0.5px;
+	line-height:30px;
+}
+ol li .boldfont {
+	font-weight:600;
+	font-size:25px;
+	color:rgb(132,189,0);
+}
+strong {
+	color:rgb(132,189,0);
+}
+#messaging-content p {
+	font-size:25px;
+	margin-bottom:2em;
+}
+.right, .wrong {
+	font-size:25px;
+	line-height:30px;
+}
+footer {
+	background:white;
+	color:grey;
+	padding:2em 1em;
+	text-align:center;
 }
 /*MEDIA QUERIES*/
 @media screen and (min-width:600px) {
@@ -231,6 +290,17 @@ img {
 		width:60%;
 	}
 }
+@media screen and (min-width:800px) {
+	.donts p {
+		width:50%;
+	}
+	#spotifygreen p {
+		width:60%;
+	}
+	.green {
+		width:30%;
+	}
+	}
 @media screen and (min-width:1200px) {
 	p {
 		width:60%;
