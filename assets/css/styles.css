@@ -8,13 +8,26 @@ body {
 	margin:0 auto;
 }
 /*NAV*/
+#icon {
+ position:fixed;
+ top:10px;
+ right:30px;
+}
+#icon img {
+  width: 50px;
+  height: 50px;
+}
 #header {
 	background:black;
 	position:fixed;
 	top:0;
 	width:100vw;
 	z-index:10;
-	height:80px;
+}
+.mainnav {
+	display:none;
+	background:black;
+	padding-top:2em;
 }    
 nav {
 	margin-right:3em;
@@ -66,7 +79,7 @@ nav li.subnav ul li a:link, nav li.subnav ul li a:visited {
 	color: white;
 }
 nav li.subnav ul li a:hover, nav li.subnav ul li a:active {
-	color: #82c341;
+	color:#82c341;
 }
 /*BANNER*/
 #banner{
@@ -301,6 +314,18 @@ footer {
 		width:30%;
 	}
 	}
+@media screen and (min-width:960px) {
+	#icon {
+    display: none;
+  }
+  nav ul li {
+  	padding-left:1em;
+  	padding-right:2em;
+  }
+.mainnav {
+    display: block;
+  }
+}
 @media screen and (min-width:1200px) {
 	p {
 		width:60%;
