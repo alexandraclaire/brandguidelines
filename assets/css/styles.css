@@ -8,31 +8,23 @@ body {
 	margin:0 auto;
 }
 /*NAV*/
-#icon {
- position:fixed;
- top:10px;
- right:30px;
-}
-#icon img {
-  width: 50px;
-  height: 50px;
-}
 #header {
 	background:black;
 	position:fixed;
 	top:0;
 	width:100vw;
 	z-index:10;
-}
-.mainnav {
-	display:none;
-	background:black;
-	padding-top:2em;
-}    
+}  
+#icon {
+	width:50px;
+	height:50px;
+	float:right;
+}  
 nav {
 	margin-right:3em;
 	padding-top:1em;
 	padding-bottom:2em;
+	background:black;
 }
 nav .brand {
 	float:left;
@@ -42,30 +34,36 @@ nav .brand img {
 	width:160px;
 	margin:0 1em 1em 1em;
 }
+.mainnav {
+	display:none;
+	margin-top:3em;
+	position:absolute;
+	right:0;
+	background:black;
+}
 nav ul li {
 	list-style-type: none;
-	float: right;
-	width: 90px;
 	font-size: 18px;
-	text-align: center;
+	text-align: right;
 	line-height: 25px;
 	font-weight:bold;
 	letter-spacing:0.8px;
+	background:black;
+	width:100vw;
 }
 nav li a {
 	color: #f6f5f4;
 	text-decoration: none;
-	display: block;
 }
 nav li a:hover {
 	color: #82c341;
 }
 nav ul .subnav ul {
 	display: none;
+	padding-top:1.5em;
 }
 nav ul .subnav:hover ul{
 	display: block;
-
 }
 nav ul .subnav ul li {
 	border-top: 1px solid #999;
@@ -79,8 +77,9 @@ nav li.subnav ul li a:link, nav li.subnav ul li a:visited {
 	color: white;
 }
 nav li.subnav ul li a:hover, nav li.subnav ul li a:active {
-	color:#82c341;
+	color: #82c341;
 }
+
 /*BANNER*/
 #banner{
     background:url(../img/background.jpg) no-repeat center center;
@@ -155,10 +154,12 @@ h1{
 	border:rgb(132,189,0) 3px solid;
 }
 /*Articles*/
+article {
+	width:100vw;
+}
 #heading {
 	background:black;
 	height:100vh;
-
 }
 #heading h2 {
 	font-size:60px;
@@ -290,6 +291,18 @@ footer {
 	text-align:center;
 }
 /*MEDIA QUERIES*/
+@media screen and (max-width:960px) {
+	nav ul .subnav ul {
+		position:absolute;
+		right:0;
+		background:black;
+	}	
+	nav ul li {
+		padding-right:2em;
+		padding-top:0.5em;
+		padding-bottom:0.8em;
+	}
+}
 @media screen and (min-width:600px) {
 	.nextsection {
 		left:35%;
@@ -318,12 +331,19 @@ footer {
 	#icon {
     display: none;
   }
-  nav ul li {
-  	padding-left:1em;
-  	padding-right:2em;
-  }
-.mainnav {
+	.mainnav {
     display: block;
+    float:right;
+    margin-top:1em;
+    background:none;
+    margin-right:1.5em;
+  }
+  nav ul li {
+  	float:right;
+  	background:none;
+  	width:90px;
+  	margin-left:1em;
+  	text-align:center;
   }
 }
 @media screen and (min-width:1200px) {
