@@ -21,7 +21,7 @@ body {
 	float:right;
 }  
 nav {
-	margin-right:3em;
+	padding-right:3em;
 	padding-top:1em;
 	padding-bottom:2em;
 	background:black;
@@ -36,14 +36,15 @@ nav .brand img {
 }
 .mainnav {
 	display:none;
-	margin-top:3em;
+	margin-top:3.5em;
 	position:absolute;
 	right:0;
 	background:black;
+	padding-right:1em;
 }
 nav ul li {
 	list-style-type: none;
-	font-size: 18px;
+	font-size: 20px;
 	text-align: right;
 	line-height: 25px;
 	font-weight:bold;
@@ -60,24 +61,34 @@ nav li a:hover {
 }
 nav ul .subnav ul {
 	display: none;
-	padding-top:1.5em;
+	padding-top:1em;
+
 }
 nav ul .subnav:hover ul{
 	display: block;
 }
 nav ul .subnav ul li {
-	border-top: 1px solid #999;
+	color:rgb(132,189,0);
+	padding-bottom:1em;
+	width:100vw;
+	background:black;
+	text-align:right;
+
 }
 nav ul .subnav ul li a {
 	line-height: 25px;
-	text-align: center;
-	color: black;
+	color:rgb(132,189,0);
+	padding-right:1em;
+}
+nav ul .subnav ul li a:hover {
+	color:white;
 }
 nav li.subnav ul li a:link, nav li.subnav ul li a:visited {
-	color: white;
+	color:rgb(132,189,0);
 }
 nav li.subnav ul li a:hover, nav li.subnav ul li a:active {
-	color: #82c341;
+	color: white;
+	text-shadow:2px 2px 1px grey;
 }
 
 /*BANNER*/
@@ -208,6 +219,7 @@ br {
 .green p, .black p, .grey p, .sand p, .white p {
 	font-size:16px;
 	padding-top:1em;
+	padding-left:1em;
 }
 #spotifygreen {
 	display:flex;
@@ -224,28 +236,30 @@ br {
 .black {
 	background:rgb(0,0,0);
 	color:white;
-	width:20vw;
+	width:22vw;
 }
 .grey {
 	background:rgb(130,130,130);
 	color:white;
-	width:20vw;
+	width:22vw;
 }
 .sand {
 	background:rgb(236,235,232);
-	width:20vw;
+	width:22vw;
 }
 .white {
 	background:rgb(255,255,255);
 	border:2px solid black;
-	width:20vw;
+	width:22vw;
 }
 .logo-images {
 	display:flex;
 	flex-wrap:wrap;
-	justify-content:space-between;
 	margin-top:3em;
 	margin-bottom:3em;
+}
+.logo-images img {
+	padding-left:2em;
 }
 .imglogo img {
 	margin-right:3em;
@@ -254,12 +268,18 @@ img {
 	max-width:100%;
 	height:auto;
 }
+.horizontal {
+	width:80vw;
+}
 .donts {
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
 	margin-top:3em;
-
+	padding-top:2em;
+}
+.donts p {
+	padding-top:1em;
 }
 ol li {
 	font-size:20px;
@@ -315,6 +335,9 @@ footer {
 	.clearspace {
 		width:60%;
 	}
+	.horizontal {
+	width:auto;
+}	
 }
 @media screen and (min-width:800px) {
 	.donts p {
@@ -326,6 +349,7 @@ footer {
 	.green {
 		width:30%;
 	}
+
 	}
 @media screen and (min-width:960px) {
 	#icon {
@@ -335,8 +359,7 @@ footer {
     display: block;
     float:right;
     margin-top:1em;
-    background:none;
-    margin-right:1.5em;
+    padding-right:5em;
   }
   nav ul li {
   	float:right;
@@ -345,12 +368,27 @@ footer {
   	margin-left:1em;
   	text-align:center;
   }
+  nav ul .subnav ul li a {
+	padding-right:0;
+}
+.logo-images p {
+	width:50%;
+}
+.imglogo {
+	width:30%;
+}
+.horizontal {
+	margin-left:5em;
+}
+.clearspace2 {
+	width:70%;
+}
+.clearspaceimg {
+	margin-left:3em;
+}
 }
 @media screen and (min-width:1200px) {
-	p {
-		width:60%;
-	}
-	.clearspace {
-		width:42%;
-	}
+	.imglogo2 {
+	display:flex;
+}
 }
